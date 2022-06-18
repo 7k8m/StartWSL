@@ -1,3 +1,5 @@
 ﻿using System.Diagnostics;
 
-Process.Start("wsl.exe").WaitForExit();
+var p = Process.Start("wsl.exe");
+Process.Start("wsl.exe", "-- ps aux");
+p.WaitForExit();
